@@ -6,14 +6,12 @@
 using namespace testing;
 std::vector<ulong> numbers;
 TEST(AccumulateTest, ParellelAccumulate) {
-   //Create a vector of random numbers
 
     auto result = parellel_accumulate(numbers.begin(), numbers.end(), numbers[0]);
     EXPECT_NE(result, 0);
 }
 
 TEST(AccumulateTest, SerialAccumulate) {
-   //Create a vector of random numbers
 
     auto result = std::accumulate(numbers.begin(), numbers.end(), numbers[0]);
     EXPECT_NE(result, 0);
